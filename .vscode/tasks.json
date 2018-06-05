@@ -1,0 +1,94 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run TicTacToe",
+			"type": "shell",
+			"command": "ant",
+			"args": [
+				"run"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Launch TicTacToe",
+			"type": "shell",
+			"command": "java",
+			"args": [
+				"-cp",
+				"build/classes:dist/lib/AbsoluteLayout.jar",
+				"tictactoee.TicTacToee"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect source and class files",
+			"type": "shell",
+			"command": "file",
+			"args": [
+				"src/tictactoee/TicTacToee.java",
+				"build/classes/tictactoee/TicTacToee.class",
+				"dist/ticTacToee.jar",
+				"dist/lib/AbsoluteLayout.jar"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Compile TicTacToe temporarily",
+			"type": "shell",
+			"command": "javac",
+			"args": [
+				"-source",
+				"8",
+				"-target",
+				"8",
+				"-cp",
+				"dist/lib/AbsoluteLayout.jar",
+				"-d",
+				"/tmp/tictactoee-run",
+				"src/tictactoee/TicTacToee.java",
+				"src/tiktactoe/ticTacToee_s.java"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect packaged application",
+			"type": "shell",
+			"command": "unzip",
+			"args": [
+				"-l",
+				"dist/ticTacToee.jar"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run packaged TicTacToe",
+			"type": "shell",
+			"command": "java",
+			"args": [
+				"-cp",
+				"dist/ticTacToee.jar:dist/lib/AbsoluteLayout.jar",
+				"tictactoee.TicTacToee"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Compile TicTacToe AI",
+			"type": "shell",
+			"command": "javac",
+			"args": [
+				"-d",
+				"/tmp/tictactoee-validation",
+				"src/tictactoee/TicTacToeAI.java"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
